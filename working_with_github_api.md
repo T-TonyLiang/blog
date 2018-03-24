@@ -36,6 +36,6 @@ Once a GitHub App is created and installed with the proper permissions for the o
 
 #### Finding a GitHub API Toolkit
 
-For Ruby users, [Octokit](https://github.com/octokit/octokit.rb) is a great project that acts as a toolkit/wrapper for the GitHub API. It provides most of the GitHub API v3 endpoints so you dont have to make the raw HTTP request and parse the result. I strongly recommend finding a GitHub API toolkit for your language of choice.
+For Ruby users, [Octokit](https://github.com/octokit/octokit.rb) is a great project that acts as a toolkit/wrapper for the GitHub API. It provides most of the GitHub API v3 endpoints so you dont have to make the raw HTTP request and parse the result. The sample code shown below will use the Octokit library and I strongly recommend finding a GitHub API toolkit for your language of choice.
 
 ## Committing Files with the GitHub API
