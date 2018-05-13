@@ -2,7 +2,7 @@
 
 *[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)* is a heavily emphasized principle in software development. It's important that the code written by developers remains as the authoritative source of truth in the codebase and that there is no other. Beyond the code however, *DRY* can also be applied to the repetitive tasks a developer may have to perform on a day to day basis.
 
-At Shopify, we found ourselves manually committing updated development database schema files on a regular basis. The amount of time lost and workflows broken to this repetitive task led us to the need for a commit bot. This article will give an overview of the GitHub API was leveraged to build a commit bot.
+At Shopify, we found ourselves manually committing updated development database schema files on a regular basis. The amount of time lost and workflows broken to this repetitive task led us to the need for a commit bot. This article will describe how we set up and leveraged the GitHub API to programatically make commits to the repository.
 
 ## Setting Up in GitHub
 
@@ -27,3 +27,10 @@ For Ruby users, [Octokit](https://github.com/octokit/octokit.rb) is a great proj
 
 ## Committing Files with the GitHub API
 
+### Committing an Individual File with the GitHub API
+
+Committing a single file with the GitHub API is quite straightforward. GitHub API v3 provides specific [endpoints](https://developer.github.com/v3/repos/contents/#create-a-file) for creating, updating and deleting a file. All one needs to provide is the path of the file, a commit message and the contents, if only committing multiple files was this easy!
+
+### Committing Multiple Files with the GitHub API
+
+Committing multiple files with the GitHub API is much more involved. It's possible to just call the endpoint for adding an individual file but this would pollute the Git history with too many commits over a period of time.
